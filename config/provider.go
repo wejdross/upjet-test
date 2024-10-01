@@ -10,7 +10,8 @@ import (
 
 	ujconfig "github.com/crossplane/upjet/pkg/config"
 
-	"github.com/upbound/upjet-provider-template/config/exoscale_block_storage_volume"
+	"github.com/upbound/upjet-provider-template/config/exoscale_iam_role"
+	// "github.com/upbound/upjet-provider-template/config/exoscale_block_storage_volume_snapshot"
 )
 
 const (
@@ -37,7 +38,8 @@ func GetProvider() *ujconfig.Provider {
 	for _, configure := range []func(provider *ujconfig.Provider){
 		// add custom config functions
 		//null.Configure,
-		exoscale_block_storage_volume.Configure,
+		exoscale_iam_role.Configure,
+		//		exoscale_block_storage_volume_snapshot.Configure,
 	} {
 		configure(pc)
 	}

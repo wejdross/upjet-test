@@ -11,7 +11,8 @@ import "github.com/crossplane/upjet/pkg/config"
 var ExternalNameConfigs = map[string]config.ExternalName{
 	// Import requires using a randomly generated ID from provider: nl-2e21sda
 	//"null_resource": config.IdentifierFromProvider,
-	"exoscale_block_storage_volume": config.NameAsIdentifier,
+	"exoscale_iam_role": config.NameAsIdentifier,
+	// "exoscale_block_storage_volume_snapshot": config.NameAsIdentifier,
 }
 
 // ExternalNameConfigurations applies all external name configs listed in the
